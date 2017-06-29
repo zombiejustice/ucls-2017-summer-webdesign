@@ -1,0 +1,57 @@
+<?php $TODAY = "p4questions-l2"; ?>
+<html>
+  <head>
+    <title>SLab 2017 Web Class Page</title>
+    <link rel='stylesheet' type='text/css' href='/main.css' />
+    <script type='text/javascript' src='script-cookies/cookies.js'></script>
+    <script type='text/javascript'>
+      function i_am_elite() {
+        var cadre = document.getElementsByClassName('elite-cadre');
+        for (let c=0; c<cadre.length; c++) {
+          cadre[c].style.display = 'block';
+        }
+        document.getElementsByTagName('a')[0].href += '?elite';
+      }
+      
+      function i_am_normal() {
+        deleteCookie('elite');
+        window.location.search = "";
+      }
+      
+      function check_status() {
+        if (getCookie('elite')) {
+          i_am_elite();
+        }
+        if (document.location.search == '?elite') {
+          setCookie('elite', 'true');
+          i_am_elite();
+        }
+      }
+    </script>
+  </head>
+  <body onLoad='check_status()'>
+<?php include "$TODAY/nav.php"; ?>
+    <div>
+      <h1>
+        Web Design
+      </h1>
+      <h4>
+        Summer 2017
+      </h4>
+
+      <?php include "$TODAY/index.php" ?>
+
+      <article>
+        <h3>
+          Internet Safety Rules:
+        </h3>
+        <p style='padding-left: 20px;'>
+          Don't use your real name, use your codename.
+          <br />Don't put a picture of yourself online.
+          <br />Don't put information about your family, your school, or where you live.
+          <br />When in doubt, leave it out.
+        </p>
+      </article>
+    </div>
+  </body>
+</html>

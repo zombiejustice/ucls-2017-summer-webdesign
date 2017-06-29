@@ -1,0 +1,86 @@
+<?php /*images we might use */
+
+	$images = array(
+		"https://www.wired.com/wp-content/uploads/archive/images/slideshow/2008/02/gallery_spore/Will_Wright2.jpg",
+		"http://media.vandal.net/i/1200x630/9-2008/200892192813_1.jpg",
+		"http://pcmedia.gamespy.com/pc/image/article/707/707976/spore-20060511043623874.jpg"
+	);
+	shuffle($images);
+
+?><html>
+  <head>
+    <title>Interview Project</title>
+    <?php
+      include '../script-checker/students.php';
+			$student='mrh';
+			if (array_key_exists('n', $_GET)) {
+				$student=$_GET['n'];
+				} else {
+				$student='mrh';
+				}
+      $alt = 0;
+      if (array_key_exists('alt', $_GET)) {
+        $alt = $_GET['alt'];
+      }
+		?>
+    <link type='text/css' rel='stylesheet' href='<?php 
+                                               if ($student == 'mrh') {
+                                                 echo 'http://slabweb.tk/mrh';
+                                               } elseif ($student == 'dualitypanda') {
+                                                 echo 'http://pandathernation.x10host.com';
+                                               } else {
+
+                                                 echo 'http://slabweb';
+                                                 if ($alt) { echo '17'; } 
+                                                 echo '.phpwebhosting.com/';
+                                                 echo $student;
+                                               } ?>/project-interview/interview.css' />
+  </head>
+  <body>
+<?php
+  if (array_key_exists('nav', $_GET)) {
+    $student = $_GET['n'];
+    echo <<<END
+  <nav>
+    <a href='newell.html?alt=$alt&nav=true&n=$student'>Gabe Newell</a>
+    <a href='notch.html?alt=$alt&nav=true&n=$student'>Notch</a>
+    <a href='rowling.html?alt=$alt&nav=true&n=$student'>JK Rowling</a>
+    <a href='sohn.html?alt=$alt&nav=true&n=$student'>Peter Sohn</a>
+    <a id='current' href='wright.html?alt=$alt&nav=true&n=$student''>Will Wright</a>
+    <a href='jordan.html?alt=$alt&nav=true&n=$student'>Michael Jordan</a>
+  </nav>
+END;
+  }
+?>
+    
+  <div>
+
+<h1>Q&amp;A with Will Wright by Brendan Sinclair of GameSpot</h1>
+
+
+
+<a href='<?php echo $images[1]; ?>'><img id='image1' src='<?php echo $images[1]; ?>' /></a>
+
+<p class='q'>How soon will we start hearing about the first projects from the Stupid Fun Club?</p>
+
+<p class='a'>I think it'll be a few months away. It's going to depend on how things develop from here, but we've got several projects in the works right now and it's just not clear when they'll be announced. That's my best guess yet.</p>
+
+
+<p class='q'>With your last big project for EA, Spore, there was discussion about whether or not it lived up to years and years of expectations. Did it live up to your expectations?</p>
+
+<p class='a'>My own expectations were always more on the toy side of Spore and getting fans involved. And we're still learning about Spore from what the fans are doing with it. In terms of the content, what the fans have done with it vastly exceeded our expectations.</p>
+
+<p class='a'>It's kind of like The Sims 1.0. When it first came out, we learned a huge amount over the first few months about what players wanted and the directions they wanted it to go, and The Sims incrementally improved with each expansion pack. We were adding in features the fans were requesting the most, and we'll be doing the same with Spore as well. So in some sense, this is the point the fans get to come in and vote on the direction of the franchise.</p>
+
+<p class='a'>Actually, Spore's done very well with EA internally, based on their forecasts within a very tight economy. They seem quite pleased with its performance.</p>
+
+<a href='<?php echo $images[2]; ?>'><img id='image2' src='<?php echo $images[2]; ?>' /></a>
+
+<p class='q'>Do you think the years and years of people looking forward to it helped or hurt the game, ultimately?</p>
+
+<p class='a'>I think it was probably overhyped, like a lot of games end up being, primarily because the development time was so long. From every project you learn and apply those learnings to the next project. I think there were certain things from Spore that were great, like releasing the Creature Creator early was a big win. But the people who are playing Spore, it's a very different demographic than we were expecting right off the bat, almost like Sim Ant.
+
+<p class='a'>We have a lot of young kids playing Spore, as young as 3 years old sitting on their parent's lap describing the creature they want made. This is the type of stuff we learn when we release something. Certain levels weren't deep enough for the hardcore gamers, and we're going back with the expansion pack and addressing that. But then other markets we didn't expect at all to be picking it up. We never expected a 3-year-old to be playing with their parents.</p>
+  </div>
+</body>
+</html>

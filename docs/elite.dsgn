@@ -1,0 +1,34 @@
+ELITE CADRE
+
+-they want to learn php
+
+PROJECTS:
+  CSS Garden - Make sure they're up to snuff
+  Modular Header / Footer / Nav - entering PHP, include, echo
+  Unlocked content - $_GET, comparators, conditional execution
+  Password simple - serverside code, $_POST
+  Password complex - mySQL queries (unencrypted password in DB)
+  Account creation - SQL insertion, encrypting passwords
+  Comments - multiple column insertion and selection, table creation?
+  
+  What tables do we need?
+  
+  passwords (for password complex) - p_id, user, pwd
+  users (for accounts) - u_id, u_name, u_pwd
+  comments (but we'll have them design/make this) - c_id, c_url, c_user, c_body, c_timestamp
+    *things to ask:
+      -how do we know what page a comment is on?
+      -how do we know who wrote a comment?
+      -how do we tell which comment comes first?
+      
+-------
+"I think it would have helped if one of us had read the directions." -30min into the group assignment
+
+NB: put images in interviews for core students
+  
+A short array of hotlinks, random order;
+Image is the hyperlink text
+
+--------
+Moomers note: Lists
+Cardinal vs ordinal vs unordered vs Franz

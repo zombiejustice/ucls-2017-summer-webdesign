@@ -1,0 +1,45 @@
+<html>
+  <body>
+    <?php
+
+    include 'credentials.php';
+    
+    if (array_key_exists('user', $_POST) and array_key_exists('pwd', $_POST)) {
+      /* check if attempt made */
+      
+      $query = "SELECT password FROM accounts WHERE user='" . $_POST['user'] . "';";
+      
+      $link = mysql_connect($server, $login, $adminpassword) or die("Connect failed");
+      
+      $result = mysql_db_query($database, $query) or die("query failed");
+      
+
+      
+      if (mysql_num_rows($result) > 0) {
+        /* check if the user exists */
+        $row = mysql_fetch_assoc($result);
+        if ($row['password'] == $_POST['pwd']) {
+          /* check the input vs user's password */
+          echo '<p>"In London one time I saw a drive-in couch." -Roy Maybe????</p>';
+          /* correct user/password pair */
+        } else {
+          /* incorrect password */
+          echo "<p>ACCESS DENIED</p><p>frown emoji</p>";
+        }
+      } else {
+          /* incorrect user */
+          echo "<p>User not found.</p>";
+      } 
+    } else {
+      /* no attempts */
+      echo "Nothing to see here&hellip;";
+    }    
+    ?>
+    
+    <form method='post' action='index.html'>
+      <label>User: <input type='text' name='user' /></label>
+      <br /><label>Password: <input type='password' name='pwd' /></label>
+      <br /><input type='submit' />
+    </form>
+  </body>
+</html>

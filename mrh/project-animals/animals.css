@@ -1,0 +1,67 @@
+body {
+	background-color: #FF00FF;
+}
+
+img {
+ width: 400px;
+ margin: 10px auto;
+ display: block;
+ border-width: 10px;
+ border-style: solid;
+}
+
+h1 {
+}
+
+h2 {
+	
+
+}
+
+p {
+	
+}
+
+article {
+
+background-color: #ffffcc;
+	padding: 10px;
+	border: 3px dotted #669999;
+	margin: 20px auto;
+	width: 500px;
+
+}
+
+#ANIMAL1 {
+	background-color: #FFFFff;
+	padding: 10px;
+}
+
+#ANIMAL2 {
+	background-color: #ccffcc;
+	padding: 10px;
+}
+
+#ANIMAL3 {
+	background-color: #FF0000;
+	padding: 10px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #660099;
+}
+
+a:visited {
+	color: #660099;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #339933;
+
+}
+
+a:active {
+	
+}

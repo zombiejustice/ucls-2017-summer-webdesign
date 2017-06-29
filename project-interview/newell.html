@@ -1,0 +1,117 @@
+<?php /*images we might use */
+
+	$images = array(
+		"https://specials-images.forbesimg.com/imageserve/55fac825e4b0ffa7afe4afa5/416x416.jpg?background=000000&cropX1=55&cropX2=599&cropY1=89&cropY2=634",
+		"https://i.amz.mshcdn.com/mZnyaRSra3T3ca04_8T010keBek=/950x534/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F33948%2F809e8c64-1571-4fca-8b86-4df1efddd07c.png",
+		"http://cache.gawkerassets.com/assets/images/9/2011/10/gabe1.jpg"
+	);
+	shuffle($images);
+
+?><html>
+<head>
+    <title>Interview Project</title>
+    <?php
+      include '../script-checker/students.php';
+			$student='mrh';
+			if (array_key_exists('n', $_GET)) {
+				$student=$_GET['n'];
+				} else {
+				$student='mrh';
+				}
+      $alt = 0;
+      if (array_key_exists('alt', $_GET)) {
+        $alt = $_GET['alt'];
+      }
+		?>
+    <link type='text/css' rel='stylesheet' href='<?php 
+                                               if ($student == 'mrh') {
+                                                 echo 'http://slabweb.tk/mrh';
+                                               } elseif ($student == 'dualitypanda') {
+                                                 echo 'http://pandathernation.x10host.com';
+                                               } else {
+
+                                                 echo 'http://slabweb';
+                                                 if ($alt) { echo '17'; } 
+                                                 echo '.phpwebhosting.com/';
+                                                 echo $student;
+                                               } ?>/project-interview/interview.css' />
+  </head>
+<body>
+<?php
+  if (array_key_exists('nav', $_GET)) {
+    $student = $_GET['n'];
+    echo <<<END
+  <nav>
+    <a id='current' href='newell.html?alt=$alt&nav=true&n=$student'>Gabe Newell</a>
+    <a href='notch.html?alt=$alt&nav=true&n=$student'>Notch</a>
+    <a href='rowling.html?alt=$alt&nav=true&n=$student'>JK Rowling</a>
+    <a href='sohn.html?alt=$alt&nav=true&n=$student'>Peter Sohn</a>
+    <a href='wright.html?alt=$alt&nav=true&n=$student''>Will Wright</a>
+    <a href='jordan.html?alt=$alt&nav=true&n=$student'>Michael Jordan</a>
+  </nav>
+END;
+  }
+?>
+  
+<div>
+
+
+<h1>Venturebeat interview with Gabe Newell</h1>
+<h2><a href='http://venturebeat.com/2012/07/25/valves-gabe-newell-talks'>Original Article</a></h2>
+
+<a href='<?php echo $images[1]; ?>'><img id='image1' src='<?php echo $images[1]; ?>' /></a>
+
+	<p class='q'>Ed Fries: What are some of the projects you're working on?</p>
+
+<p class='a'>Gabe Newell: When you think about the kinds of digital goods that people want to have, there has to be a richness. We call one of our tools Source Filmmaker, but it also encompasses things like comic books or posters. All our posters were created inside of tools that actually run inside our game engine. But the whole point is driven out of this idea that, rather than these islands of entertainment that we've had in the past, five or 10 years from now everything is going to be lumpy nodes in this overall economy.</p>
+
+<p class='a'>When you look at the other questions: Why are we looking at wearable computers? Why did we hire Jerry Ellsworth? Why do we have people working on Linux? That's the second part of the problem. In order for this innovation to happen, a bunch of things that haven't been happening on closed platforms have to occur and continue to occur. Valve wouldn't exist if it weren't for the PC. Id Software, Epic, Zynga, Facebook, and Google wouldn't have existed without the openness of the platform. I think there's a strong temptation to close the platform. If people look at what they can accomplish when they can limit competitors' access to their platform, they say, "Wow, that's really exciting."</p>
+
+<p class='a'>That's not how we got here, and I don't think that's a very attractive future. So we're looking at the platform, and up until now we've been a free rider. We've been able to benefit from everything that's gone into the PC and the Internet. Now we have to start finding ways that we can continue to make sure there are open platforms. So that involves a couple of different things.</p>
+
+<p class='a'>One, we're trying to make sure that Linux thrives. Our perception is that one of the big problems holding Linux back is the absence of games. I think that a lot of people — in their thinking about platforms — don't realize how critical games are as a consumer driver of purchases and usage. So we're going to continue working with the Linux distribution guys, shipping Steam, shipping our games, and making it as easy as possible for anybody who's engaged with us — putting their games on Steam and getting those running on Linux, as well. It's a hedging strategy.</p>
+
+<p class='a'>But when you start thinking about a platform, you have to address it. You have to address mobile. You have to look at what's going to happen post-tablet. If you look at the mouse and keyboard, it was stable for about 25 years. I think touch will be stable for about 10 years. I think post-touch, and we'll be stable for a really long time — for another 25 years. I think touch will be this intermediate…</p>
+
+<p class='q'>Fries: What's "post-touch"?</p>
+
+<p class='a'>Newell: It depends on how specific you want to get. It's what you do when...</p>
+
+<p class='q'>Fries: Is it voice recognition? Is it gesture?</p>
+
+<p class='a'>Newell: It's a couple of different technologies combined together. The two hard problems in the short-term are input and output. I don't have all these nice slides. But the question you have to answer is, "How can I see stuff overlaid in the world when you have things like noise?" You have weird persistence problems. How can I be looking at this group of people and see their names floating above them? That actually turns out to be an interesting problem that's finally a tractable problem.</p>
+
+<p class='a'>I can go into Mike Abrash's office and put on this $70,000 system, and I can look around the room with the software they've written, and they can overlay pretty much anything, regardless of what my head is doing or my eyes are doing. Your eyes are actually troublesome buggers. But the input side is open-ended. How can you be robustly interacting with virtual objects when there's nothing in your hands? Most of the ideas are really stupid because they reduce the amount of information you can express. One of the key things is that a keyboard has a pretty good data rate in terms of how much data you can express and how much intention you can convey.</p>
+
+<p class='a'>You want to figure out how that actually gets better in the next generation. Doing something like this is incredibly slow, right? I type 150 words a minute. Having to do anything with my arm is a really bad idea. There's some crazy speculative stuff. One of the engineers actually did something with a...okay, this is super-nerdy. You can come back and tease us about this years from now. But he did a tongue controller. When you look at all of the muscles in your body, if you think of them as SCSI or USB, it turns out that your tongue is a pretty good way of connecting a mechanical system to your brain.</p>
+
+<p class='a'>But it's really disconcerting to have the person you're sitting next to going, "Arglearglargle." [Big laughs] "You just Googled me, didn't you?" I don't think tongue input is in our futures. But I do think you'll have bands on your wrists, and you'll be doing stuff with your hands. Your hands are incredibly expressive. If you look at somebody playing a guitar versus somebody playing a keyboard, there's a far greater amount of data that you can get through the information that people convey through their hands than we're currently using. Touch is...it's nice that it's mobile. It's lousy in terms of symbol rate.</p>
+
+<p class='q'>Fries: That was really interesting. One of the words that you used is "experimentation." In my own interaction with Valve employees — more than any other company that I deal with — there's this culture of experimentation and willingness to try different things.</p>
+
+<a href='<?php echo $images[2]; ?>'><img id='image2' src='<?php echo $images[2]; ?>' /></a>
+	
+<p class='q'>There's also a kind of spooky thing, at least with some of the guys, or maybe some of the more senior guys, where they sound a lot like you when they talk. [Laughter] Your employee handbook leaked out last year, and that got a lot of press. That and your manager-less system. How do you make the culture that you have at Valve? I think that culture is a huge part of what makes a company successful. How do you turn yourself into a lot of people who think the same way — who can go out and do these crazy projects and be successful?</p>
+
+<p class='a'>Newell: When I worked at Microsoft, I got to go and visit a bunch of different companies. Probably a hundred different companies a year. You'd see all the different ways they'd work. The guys who did Ventura Publisher one day, and then United Airlines the next. You'd see the 12 guys in Texas doing Doom, and then you'd go see Aetna life insurance. I don't know what your experience was like, but it made me think about what the structure of a company should be in terms of the goals that you have as a company.</p>
+
+<p class='a'>The opportunity that I think we all saw was as follows: In the same way that the PC drove a bunch of business changes, the Internet was going to make a bunch of minor business functions efficient. So you would, instead, build a company out of the highest-value people. So rather than finding the cheapest people in the world to hire, you wanted to find the most expensive people.  That was one of the things we wanted to take advantage of. And then if you have that group of people, you have to think about how to make them as productive as possible because they can always leave.</p>
+
+<p class='a'>About half the people at Valve have run their own companies, so they always have the option not just to take a job at another game company, but to go start their own company. The question you always have to answer is, "How are we making these people more valuable than they would be elsewhere?" It turns out that you make high-value people more valuable in different ways. Let's say you worked at Valve. I don't need to tell you anything about games, management, or technology. I can make you better in other ways. A lot of times I make people better by getting stupid, distracting, bureaucratic stuff off their desk. That's an incredibly easy way to make a senior person more productive. Especially if they're coming from the film industry, where they spend two-thirds of their time battling entrenched bureaucracies and organizations. It's easy for us to make a value pitch to someone like Jeremy Bennett, who was the artistic director on The Lord of the Rings movies. However much value he created there, at Valve he can create a lot more value and have a lot more fun.</p>
+
+<p class='a'>I could go into a lot more detail about our vacation policies or the fact that all our desks are on wheels, but it all comes back to this question of, "How do you make people like you as productive as possible? How do you attract them to the company and then make them stay at the company?" Although you have your own company, so you don't need it.</p>
+
+<p class='q'>Fries: I don't know. I'm getting tempted here.... [Laughs]</p>
+
+<p class='a'>Newell: The culture at Valve is pretty much crowdsourced. The handbook is a wiki. One of the first things we say to new hires is, "You have to change something in the handbook." They say, "No, it's sacred. It's this text of received wisdom." Then the people who've been there for a long time all laugh hysterically and say, "Yeah, well, it's your job to move it forward." When you're looking for a subversive thing that people aren't used to, telling them to change the handbook is a good way of convincing them.... It usually takes about six months for new people to really internalize the way the company works. Depending on the person, we have a set of tricks that we use. Changing the handbook is one. Or giving me something to do. In theory, I'm at the top of some hierarchy, right? So I say, "Well, you give me something to do."</p>
+
+<p class='q'>Fries: They have to give you something to do?</p>
+
+<p class='a'>Newell: Yeah. It's just a way of getting people over this idea. A lot of times people will want to complain. The first time somebody complains, you say, "Okay, fix it." You just say, "I don't know what you expect to happen now, but you've just given yourself a job."</p>
+
+<p class='q'>Fries: Does that train them to complain less or to fix things more?</p>
+
+<p class='a'>Newell: If you hired the right person, it trains them to fix stuff. If you hired the wrong person, they'll say, "Oh, this is mean." That's basically a very tiny snapshot of why we're the way we are and how we try to propagate that into new people.</p>
+  </div>
+</body>
+</html>

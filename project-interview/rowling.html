@@ -1,0 +1,93 @@
+<?php /*images we might use */
+
+	$images = array(
+		"https://images-na.ssl-images-amazon.com/images/I/51o0QIAuP9L._SL500_.jpg",
+		"http://media.al.com/scenesource/photo/jk-rowling-lawsuitjpg-f4863e11ceb6c86b_large.jpg",
+		"https://thumbs.mic.com/YTk4MjIxOTA1ZSMvZ1JkVEx1bkd4ZmRSZWVQZ1hBT1ZGaVZDNlY4PS8weDU0OjM1OTZ4MjE3MC85MDB4NTMwL2ZpbHRlcnM6cXVhbGl0eSg3MCkvaHR0cDovL3MzLmFtYXpvbmF3cy5jb20vcG9saWN5bWljLWltYWdlcy93ZGhyeG9qd29zY3lpZHljd3VuMnJrbmh5aDF3ZmN4ZGp3c3Fqa2Y3dmFxcnNyZTlob2V1bWZtdjZtNHpxYWt1LmpwZw.jpg"
+	);
+	shuffle($images);
+
+?><html>
+<head>
+    <title>Interview Project</title>
+    <?php
+      include '../script-checker/students.php';
+			$student='mrh';
+			if (array_key_exists('n', $_GET)) {
+				$student=$_GET['n'];
+				} else {
+				$student='mrh';
+				}
+      $alt = 0;
+      if (array_key_exists('alt', $_GET)) {
+        $alt = $_GET['alt'];
+      }
+		?>
+    <link type='text/css' rel='stylesheet' href='<?php 
+                                               if ($student == 'mrh') {
+                                                 echo 'http://slabweb.tk/mrh';
+                                               } elseif ($student == 'dualitypanda') {
+                                                 echo 'http://pandathernation.x10host.com';
+                                               } else {
+
+                                                 echo 'http://slabweb';
+                                                 if ($alt) { echo '17'; } 
+                                                 echo '.phpwebhosting.com/';
+                                                 echo $student;
+                                               } ?>/project-interview/interview.css' />
+  </head>
+<body>
+<?php
+  if (array_key_exists('nav', $_GET)) {
+    $student = $_GET['n'];
+    echo <<<END
+  <nav>
+    <a href='newell.html?alt=$alt&nav=true&n=$student'>Gabe Newell</a>
+    <a href='notch.html?alt=$alt&nav=true&n=$student'>Notch</a>
+    <a id='current' href='rowling.html?alt=$alt&nav=true&n=$student'>JK Rowling</a>
+    <a href='sohn.html?alt=$alt&nav=true&n=$student'>Peter Sohn</a>
+    <a href='wright.html?alt=$alt&nav=true&n=$student''>Will Wright</a>
+    <a href='jordan.html?alt=$alt&nav=true&n=$student'>Michael Jordan</a>
+  </nav>
+END;
+  }
+?>
+
+<div>
+
+<h1>J K Rowling at the Edinburgh Book Festival</h1>
+
+<a href='<?php echo $images[1]; ?>'><img id='image1' src='<?php echo $images[1]; ?>' /></a>
+
+<p class='q'>Which books did you read when you were a child and which books do you read now?</p>
+
+<p class='a'>When I was a child, I would read absolutely anything. My favourite books for younger people would be I Capture the Castle by Dodie Smith, which I really love, The Little White Horse, all the classic children's books... I love E Nesbit-I think she is great and I identify with the way that she writes. Her children are very real children and she was quite a groundbreaker in her day.</p>
+
+<p class='q'>All the paintings we have seen at Hogwarts are of dead people. They seem to be living through their portraits. How is this so?If there was a painting of Harry's parents, would he be able to obtain advice from them?</p>
+
+<p class='a'>That is a very good question. They are all of dead people; they are not as fully realised as ghosts, as you have probably noticed. The place where you see them really talk is in Dumbledore's office, primarily; the idea is that the previous headmasters and headmistresses leave behind a faint imprint of themselves. They leave their aura, almost, in the office and they can give some counsel to the present occupant, but it is not like being a ghost. They repeat catchphrases, almost. The portrait of Sirius' mother is not a very 3D personality; she is not very fully realised. She repeats catchphrases that she had when she was alive. If Harry had a portrait of his parents it would not help him a great deal. If he could meet them as ghosts, that would be a much more meaningful interaction, but as Nick explained at the end of Phoenix-I am straying into dangerous territory, but I think you probably know what he explained-there are some people who would not come back as ghosts because they are unafraid, or less afraid, of death.</p>
+
+<p class='q'>Who is your favourite character in the books?</p>
+
+<p class='a'>I have loads of favourite characters. I really like Harry, Ron, Hermione, Hagrid and Dumbledore. I love writing Snape-even though he is not always the nicest person, he is really fun to write. I love writing Dudley. If I could meet anyone, I might choose Lupin. I really like him. My favourite new character is Luna-I am very fond of her.</p>
+
+<p class='q'>How do you think of all the names, like Moony, Wormtail, Padfoot and Prongs?</p>
+
+<p class='a'>Those names all came out of the creatures that they turned into. I had a lot of fun with those. Wormtail was the most difficult one. My sister loathes rats and her problem with them is their tails, so that is what gave me the idea. You actually know how I get some names because I stole your Mum's maiden name, didn't I? You have to be careful if you get friendly with me because you tend to turn up in my books, and if you offend me, you often turn up as a nasty character. I found the name McClaggan the other day, which I think is a great name. There is a McClaggan in book six because I thought that it is a surname that is too good to waste.</p>
+
+<a href='<?php echo $images[2]; ?>'><img id='image2' src='<?php echo $images[2]; ?>' /></a>
+	
+<p class='q'>In your stories, will Harry Potter ever grow up as a wizard?</p>
+
+<p class='a'>Well, I don't think it is giving too much away to say that he will survive to book seven, mainly because I do not want to be strangled by you lot, but I am not going to say whether he grows any older than that because I have never said that. You are good at putting me on the spot!</p>
+
+<p class='q'>Are any of your characters based on real people?</p>
+
+<p class='a'>The only character who is deliberately based on a real person is Gilderoy Lockhart. [Laughter]. Maybe he is not the one that you would think of, but I have to say that the living model was worse. [Laughter]. He was a shocker! The lies that he told about adventures that he'd had, things he'd done and impressive acts that he had committed… He was a shocking man. I can say this quite freely because he will never in a million years dream that he is Gilderoy Lockhart. I am always frightened that he is going to turn up one day. He is just one of those people from your past whom you feel you have never quite shaken off. I will look up one day at a signing and he will say, "Hello, Jo". [Laughter]. Other people have contributed the odd characteristic, such as a nose, to a character, but the only character who I sat down and thought that I would base on someone is Gilderoy Lockhart. It made up for having to endure him for two solid years.</p>
+
+<p class='q'>What do you do in your spare time?</p>
+
+<p class='a'>I have no spare time at all. [Laughter]. When I'm not writing or looking after the children, I read and sleep. To be totally honest with you, at the moment sleeping is probably my very favourite thing in the world to do. I know that is a bit of a depressing answer. I would like to say I was partying with Mick Jagger -well, I wouldn't want to be partying with Mick Jagger, that is a complete lie, but it would be a more interesting answer to give you here at the festival.</p>
+  </div>
+</body>
+</html>

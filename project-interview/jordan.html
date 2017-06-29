@@ -1,0 +1,88 @@
+<?php /*images we might use */
+
+	$images = array(
+		"http://vignette3.wikia.nocookie.net/siivagunner/images/3/3d/GET_READY_TO_JAM.jpg/revision/latest?cb=20160812154030",
+		"http://s1.thingpic.com/images/W6/5BKTq2bbmESy4o7XDbKBZYLT.jpeg",
+		"https://static.sportskeeda.com/wp-content/uploads/2012/12/message-from-michael-jordan-1090088.jpg"
+	);
+	shuffle($images);
+
+?><html>
+<head>
+    <title>Interview Project</title>
+    <?php
+      include '../script-checker/students.php';
+			$student='mrh';
+			if (array_key_exists('n', $_GET)) {
+				$student=$_GET['n'];
+				} else {
+				$student='mrh';
+				}
+			$alt = 0;
+      if (array_key_exists('alt', $_GET)) {
+        $alt = $_GET['alt'];
+      }
+		?>
+    <link type='text/css' rel='stylesheet' href='<?php 
+                                               if ($student == 'mrh') {
+                                                 echo 'http://slabweb.tk/mrh';
+                                               } elseif ($student == 'dualitypanda') {
+                                                 echo 'http://pandathernation.x10host.com';
+                                               } else {
+
+                                                 echo 'http://slabweb';
+                                                 if ($alt) { echo '17'; } 
+                                                 echo '.phpwebhosting.com/';
+                                                 echo $student;
+                                               } ?>/project-interview/interview.css' />
+  </head>
+<body>
+<?php
+  if (array_key_exists('nav', $_GET)) {
+    $student = $_GET['n'];
+    echo <<<END
+  <nav>
+    <a href='newell.html?alt=$alt&nav=true&n=$student'>Gabe Newell</a>
+    <a href='notch.html?alt=$alt&nav=true&n=$student'>Notch</a>
+    <a href='rowling.html?alt=$alt&nav=true&n=$student'>JK Rowling</a>
+    <a href='sohn.html?alt=$alt&nav=true&n=$student'>Peter Sohn</a>
+    <a href='wright.html?alt=$alt&nav=true&n=$student''>Will Wright</a>
+    <a id='current' href='jordan.html?alt=$alt&nav=true&n=$student'>Michael Jordan</a>
+  </nav>
+END;
+  }
+?>
+
+<div>
+
+
+<h1>Gaston Gazette interview with Michael Jordan</h1>
+
+
+<a href='<?php echo $images[1]; ?>'><img id='image1' src='<?php echo $images[1]; ?>' /></a>
+	
+<p class='q'>A reader sent in a question wondering if there would be a sequel to Space Jam. Could that be in your future?</p>
+
+<p class='a'>[Laughs] "I don't think that'll happen. It was a little more work than I expected. But it was fun. One experience is all I needed with that."</p>
+  
+<p class='q'>Talk about entering your first full season as a team owner.</p>
+
+<p class='a'>It's been fun actually. It's gotten me out to do a lot of things that I haven't done in a long time. I enjoyed doing this. I like being able to own the team, put forth my ideas, my concepts and my thoughts. We made the playoffs last year and we've got a good nucleus of players without changing too many faces. I'm looking forward to an exciting season. The energy around here is unbelievable. We just want to keep it going. We want to keep building on that. Once again, I get motivation from all the people around here because they feel like something good is happening.</p>
+
+<p class='q'>You've often talked about how hard it's been to watch games, especially for a team you own. Is it getting easier and will you continue to sit beside the Bobcats' bench?</p>
+
+<p class='a'>Actually, I've got two extra seats. So now I've got four seats. But it's getting easier with the more weight I put on, the more hair I lose, the more grey hair I get. I've started to live more vicariously through my team. Now I want the guys out there to have the same passion and same understanding that I had. But it's easier than it once was, which has allowed me to get down closer to the floor. Before, I thought I couldn't because I was so new to being an owner because I was so new to being away from the game. Now, I'm a little bit better.</p>
+
+<a href='<?php echo $images[2]; ?>'><img id='image2' src='<?php echo $images[2]; ?>' /></a>
+	
+<p class='q'>How important is it to make the playoffs and if you miss, would you consider this season a disappointment?</p>
+
+<p class='a'>I expect us to be in the playoffs. I think it would be a step back if we don't. Knock on wood, a lot of things can happen like injuries or whatever. But I truly expect us to get in the playoffs and go further in the playoffs because the nucleus of our players - Stephen Jackson and Gerald Wallace and the rest of the guys - have come committed to trying to get us further in the playoffs. I'm buying into it. I believe in them. I'm very comfortable with Larry. In his third year, Larry has always done very, very well. So I'm anticipating that to happen.</p>
+
+<p class='q'>What kind of interaction have you had with fans? I'm assuming you're getting positive comments about trying to make NBA basketball successful in this market.</p>
+
+<p class='a'>Everybody that I've seen has made positive comments. I think they welcome change. As you know, we've done some projects. Like the CMS project I think really helped us put a focus back in the community. Habitat for Humanity is something good that we do. We had the Cool School Field Trip (on Wednesday morning for are middle school students) and we had 17,000 kids coming in here. So I feel like people are starting to understand my commitment to the community. I've been around. I move around a lot easier. My place isn't quite done yet, but it will be. So I've interacted with a lot of people. I'm very happy about that. That's what we anticipated and we hope it will continue.</p>
+
+  </div>
+</body>
+</html>

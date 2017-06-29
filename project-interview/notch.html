@@ -1,0 +1,88 @@
+<?php /*images we might use */
+
+	$images = array(
+		"https://www.gamereactor.eu/media/77/notch_937734.gif",
+		"http://www.nerd-age.com/wp-content/uploads/2011/09/Minecraft-1.9-villager.jpg",
+		"http://craft10.altervista.org/wp-content/uploads/2016/05/jigglefuggleduggle.jpg"
+	);
+	shuffle($images);
+
+?><html>
+<head>
+    <title>Interview Project</title>
+    <?php
+      include '../script-checker/students.php';
+			$student='mrh';
+			if (array_key_exists('n', $_GET)) {
+				$student=$_GET['n'];
+				} else {
+				$student='mrh';
+				}
+      $alt = 0;
+      if (array_key_exists('alt', $_GET)) {
+        $alt = $_GET['alt'];
+      }
+		?>
+    <link type='text/css' rel='stylesheet' href='<?php 
+                                               if ($student == 'mrh') {
+                                                 echo 'http://slabweb.tk/mrh';
+                                               } elseif ($student == 'dualitypanda') {
+                                                 echo 'http://pandathernation.x10host.com';
+                                               } else {
+
+                                                 echo 'http://slabweb';
+                                                 if ($alt) { echo '17'; } 
+                                                 echo '.phpwebhosting.com/';
+                                                 echo $student;
+                                               } ?>/project-interview/interview.css' />
+  </head>
+<body>
+<?php
+  if (array_key_exists('nav', $_GET)) {
+    $student = $_GET['n'];
+    echo <<<END
+  <nav>
+    <a href='newell.html?alt=$alt&nav=true&n=$student'>Gabe Newell</a>
+    <a id='current' href='notch.html?alt=$alt&nav=true&n=$student'>Notch</a>
+    <a href='rowling.html?alt=$alt&nav=true&n=$student'>JK Rowling</a>
+    <a href='sohn.html?alt=$alt&nav=true&n=$student'>Peter Sohn</a>
+    <a href='wright.html?alt=$alt&nav=true&n=$student''>Will Wright</a>
+    <a href='jordan.html?alt=$alt&nav=true&n=$student'>Michael Jordan</a>
+  </nav>
+END;
+  }
+?>
+
+<div>
+
+<h1>Interview with Notch On The Future Of Minecraft from Rock, Paper, Shotgun</h1>
+
+<a href='<?php echo $images[1]; ?>'><img id='image1' src='<?php echo $images[1]; ?>' /></a>
+
+<p class='q'>Bearing in mind your current sales, and a plan to have the game go gold later this year, do you think Minecraft is going to be the first game to sell fewer copies after it's released than before?</p>
+
+<p class='a'>Yeah, I think it might be! Part of the draw to buy the game is that it's being constantly updated. So you're buying what the game is now, and what it's going to be. We're going to do a release, mostly to satisfy my urge to actually have finished something, and so reporters know when the game was released. There's been a lot of discussion when we were nominated for rewards - the game wasn't started in 2010, and wasn't released in 2010! Having a release date is a good thing. We're going to keep updating it, releasing expansion packs for as long as people buy it.</p>
+
+<p class='q'>Did you have any idea of the success you'd have?</p>
+
+<p class='a'>No! I thought it would work for half a year, and perhaps fund the game and the next one, and then keep doing that as my day job. But it hit a nerve I guess, and had a really nice viral effect. There's now, like, half a million YouTube videos of it.</p>
+
+<p class='q'>You talked about wanting an adventure mode. Is that something you want to have done by release?</p>
+
+<p class='a'>It's a bit difficult to add a proper narrative in a randomly generated world. So we're thinking about achievements and quests. The first thing would be opening the inventory - ding! - wow, you've opened the inventory. And it then gets more complicated, and branches out into different things to do, like having separate paths. And then perhaps have it all converge at the end, to kill the dragon, or something. That's going to be something that drives things forward.</p>
+
+<p class='a'>The difficult part from a story perspective - it's very fun when the game feels like it has some kind of a conflict in it. Like, you're on this island because this happened, and to fix it you have to do that. I'm not sure how to present that yet. I don't want to have huge text for people to read. And I can't really do a CG movie - that would be a thousand times larger than the game. I've been putting off figuring that out.</p>
+
+<a href='<?php echo $images[2]; ?>'><img id='image2' src='<?php echo $images[2]; ?>' /></a>
+	
+<p class='q'>So how would you give missions in Minecraft?</p>
+
+<p class='a'>I'm not sure. Having it based in achievements gives it some meta-gameplay. I also have this really silly idea of the mob villages, with a parody of MMO quests. A quest board, maybe with a picture of a pork chop and it says "four". Right, so I have to get four pork chops. I think that could work if you made it silly enough. You don't have to do it to progress, but if I do it I get a diamond. Then you would get tiny mini-quests, and you could get more favour with the town.</p>
+
+<p class='q'>People were probably expecting you to surf on the Minecraft theme. Why did you step so far away? Was it because you wanted to make this idea you'd had?</p>
+
+<p class='a'>Partly that. And partly because I want to work for a company that makes new games. I don't want to get stuck making Minecraft 2 and 3. It might make sense for the company - I understand that - and we can get other people to make Minecraft 2. But I personally want to make new games. It's more interesting.</p>
+
+  </div>
+</body>
+</html>

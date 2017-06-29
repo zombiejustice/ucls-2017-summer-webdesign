@@ -1,0 +1,68 @@
+body {
+	background-color: #ffffcc;
+	width: 600px;
+	border-left: 30px double #999999;
+	border-right: 30px double #999999;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+img {
+	width: 560px;
+	border: 10px solid #999999;
+}
+
+h1 {
+	font-family: "Gaslamp", "Garamond", serif;
+}
+
+h2 {
+
+	margin: 10px 30px;
+	font-family: "Gaslamp", "Garamond", serif;
+
+	}
+
+p {
+	font-family: "Hope", "Helvetica", serif;
+}
+
+article {
+
+padding: 10px;
+margin-bottom: 10px;
+
+}
+
+#hammerhead_shark {
+	background-color: #ccccff;
+}
+
+#cuttlefish {
+	background-color: #ccffcc;
+}
+
+#pistol_shrimp {
+	background-color: #ffcccc;
+}
+
+a:link {
+   color: #993333;
+}
+
+a:visited {
+   color: #993333;
+
+
+}
+
+a:hover {
+
+   text-decoration: line-through;
+
+}
+
+a:active {
+
+
+}

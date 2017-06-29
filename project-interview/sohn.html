@@ -1,0 +1,83 @@
+<?php /*images we might use */
+
+	$images = array(
+		"http://www.cartoonbrew.com/wp-content/uploads/2014/10/petesohn.jpg",
+		"http://www.trbimg.com/img-56554435/turbine/la-et-mn-good-dinosaur-director-peter-sohn-20151126",
+		"https://az616578.vo.msecnd.net/files/responsive/embedded/any/desktop/2016/09/26/636104976890144841-37146664_open-uri20150422-12561-17yo1p6_142a7bbd.jpeg"
+	);
+	shuffle($images);
+
+?><html>
+<head>
+    <title>Interview Project</title>
+    <?php
+      include '../script-checker/students.php';
+			$student='mrh';
+			if (array_key_exists('n', $_GET)) {
+				$student=$_GET['n'];
+				} else {
+				$student='mrh';
+				}
+      $alt = 0;
+      if (array_key_exists('alt', $_GET)) {
+        $alt = $_GET['alt'];
+      }
+		?>
+    <link type='text/css' rel='stylesheet' href='<?php 
+                                               if ($student == 'mrh') {
+                                                 echo 'http://slabweb.tk/mrh';
+                                               } elseif ($student == 'dualitypanda') {
+                                                 echo 'http://pandathernation.x10host.com';
+                                               } else {
+
+                                                 echo 'http://slabweb';
+                                                 if ($alt) { echo '17'; } 
+                                                 echo '.phpwebhosting.com/';
+                                                 echo $student;
+                                               } ?>/project-interview/interview.css' />
+  </head>
+<body>
+<?php
+  if (array_key_exists('nav', $_GET)) {
+    $student = $_GET['n'];
+    echo <<<END
+  <nav>
+    <a href='newell.html?alt=$alt&nav=true&n=$student'>Gabe Newell</a>
+    <a href='notch.html?alt=$alt&nav=true&n=$student'>Notch</a>
+    <a href='rowling.html?alt=$alt&nav=true&n=$student'>JK Rowling</a>
+    <a id='current' href='sohn.html?alt=$alt&nav=true&n=$student'>Peter Sohn</a>
+    <a href='wright.html?alt=$alt&nav=true&n=$student''>Will Wright</a>
+    <a href='jordan.html?alt=$alt&nav=true&n=$student'>Michael Jordan</a>
+  </nav>
+END;
+  }
+?>
+  
+<div>
+
+<h1>Interview with Peter Sohn</h1>
+
+<a href='<?php echo $images[1]; ?>'><img id='image1' src='<?php echo $images[1]; ?>' /></a>
+
+<p class="q">My first question -and you've talked about this before- is about how you got the idea to do a short based on the classic 'babies come from storks' fable or whatever. Give readers a brief history.</p>
+
+<p class='a'>Okay. The idea started a long time ago. The actual spark of it started when I was a kid in New York. My mom took me to go see Dumbo, and I remember there's an opening to that film where the storks deliver all the babies. And as a kid I really was wondering where did they get all the babies from. And I had this idea that because they were birds they flew to the clouds in the sky, that's where all the babies came from.And later, I mean, like a year and a half ago was when I really started fleshing that idea out, when I was pitching it to John Lasseter. He really liked the idea, and then I started really fleshing out the characters and the actual story of what happens. But it was something that was just a seed for a long time until I got to plant it here at Pixar a couple of years ago.</p>
+
+<p class='q'>Were you told the story as a kid? Did you believe it? (laughing)</p> 
+
+<p class='a'>It wasn't about believing, it's just all I really, kind of, knew as a kid. Like, I remember, that's where -like if we wanted a pet that's where the pet would come from, you know what I mean? [But] then it was really fast after learning where babies [actually] come from.It was such a innocent thing watching Dumbo. And there have been several other stories of stork delivery mistakes but I didn't really want to go there I wanted to explore the other end of it, and try to find something new about the story.</p>
+
+
+<a href='<?php echo $images[2]; ?>'><img id='image2' src='<?php echo $images[2]; ?>' /></a>
+
+<p class='q'>As director, how excited would you be to get an Oscar nomination for Partly Cloudy, which seems likely?</p>
+
+<p class='a'>[surprised] Ohh! Yeah, absolutely, it would be very exciting. I'm just living off the high of -I had just shown it to a crowd in Austin, Texas maybe a couple of weeks ago and just having people seeing it- cause I've shown it here to some story guys and we just had it premiere and it had a great response- but having [regular] people watch it, it's like no other feeling you'll ever have.Just hearing an audience really connect to it and laugh at something, you know, really, really enjoying something that took a while, that a whole crew put their heart into, is the most satisfying thing. I mean, have you made any films? Do you know what I'm talking about?</p>
+
+
+<p class='q'>Do you see yourself ever helming a feature for Pixar? Is it a dream for you?</p>
+
+<p class='a'>Um, yeah. Yeah, sure. Right now, it's just, I have my ideas that I'm still kind of putting into pots, growing the seeds. When they're ready to really grow, I'll show somebody.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  margin: 0 10%;
+  border-left: 5px solid #000000;
+  border-right: 5px solid #000000;
+  padding: 10px 10px;
+}
+
+article {
+  border-top: 3px dotted #666666;
+}
+
+h1 {
+  text-align: center;
+}
+
+ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+img {
+  display: block;
+  margin: 5px auto;
+  border: 10px solid #000000;
+  max-width: 90%
+}
+
+li {
+  margin-top: 1em;
+}

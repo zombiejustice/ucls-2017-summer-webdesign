@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mr. H's Riddles</title>
+<link rel='stylesheet' type='text/css' href='questions.css' />
+<script type='text/javascript'>
+
+function reveal_answer(no){
+	document.getElementsByClassName('a')[no].style.color = '#ffffff';
+}
+
+</script>
+</head>
+<body>
+<h1>Mr. H has questions</h1>
+<h2>click for answers</h2>
+<p class='q'>The rich want it, the poor have it, and if you eat it, you will die. What is it?</p>
+<p class='a' onClick='reveal_answer(0)'>Nothing.</p>
+
+<p class='q'>What do you call a dog with one leg missing?</p>
+<p class='a' onClick='reveal_answer(1)'>Unlucky.</p>
+
+<p class='q'>What do you call a dog with four legs missing?</p>
+<p class='a' onClick='reveal_answer(2)'>Doesn't matter.<br /><span class='delay'>He won't come when you call in any case.</span></p>
+
+<p class='q'>How did Harry Potter get down the hill?</p>
+<p class='a' onClick='reveal_answer(3)'>Walking<br /><span class='delay'>...j/k rolling.</span></p>
+
+<p class='q'>Did you know that Swedish Fish are completely vegan?</p>
+<p class='a' onClick='reveal_answer(4)'>It's true.<br /><span class='delay'>They never eat any animal products.</span></p>
+
+<p class='q'>What is your name?</p>
+<p class='a' onClick='reveal_answer(5)'><span id='bond' class='delay'>James</span> Bond.</p>
+
+
+</body>
+</html>
