@@ -1,12 +1,3 @@
-    <nav>
-      <a href='script-checker'>Project Checker</a>
-      <a href='http://www.triplesmart.com/fonts.html'>Web Safe Fonts</a>
-      <a href='http://www.w3schools.com/colors/colors_picker.asp'>Color Picker</a>
-      <a href='setup-ftp'>Set-Up CodeAnywhere</a>
-      <a href='#p1homepage'>Project: Homepage</a>
-      <a href='#p2animals'>Project: Animals</a>
-    <section class='elite-cadre'>
-      <a href='#e1garden'>Elite: CSS Garden</a>
-      <a onClick='i_am_normal()' href='#'>Hide Elite Material</a>
-    </section>
-    </nav>
+<?php include "p2animals-l3/nav.php"; ?>
+<a href='http://www.amp-what.com'>&amp;what? - HTML Entity Database</a>
+<a href='#p2animals'>Project: Animals</a>

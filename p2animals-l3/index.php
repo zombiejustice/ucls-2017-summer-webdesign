@@ -1,10 +1,10 @@
     <!-- p2animals-l3 begin -->
-    <article>
+    <article id='p2animals'>
       <h3>
         Project: Animals - Lesson 3: Hyperlinks
       </h3>
       <p>
-        Friday we learned about making hyperlinks with the anchor element in HTML and hyperlink styling in CSS. Remember that there are four pseudoclasses of the anchor element: a:link, a:visited, a:hover, and a:active, and they should always appear in that order in your CSS document.
+        Previously we learned about making hyperlinks with the anchor element in HTML and hyperlink styling in CSS. Remember that there are four pseudoclasses of the anchor element: a:link, a:visited, a:hover, and a:active, and they should always appear in that order in your CSS document.
       </p>
       <pre>
 &lt;!-- this is HTML --&gt;

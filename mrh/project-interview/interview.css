@@ -1,8 +1,17 @@
 body {
-	width: 600px;
-	margin: 0 auto;
-	padding: 0;
-	background-color: #012345;
+  background-image: url('http://greywolf-graphics.com/images/awesome-wallpaper-backgrounds/awesome-wallpaper-backgrounds-19.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+	background-color: #000000;
+}
+
+div {
+  background-color: #012345;
+  padding: 25px;
+  width: 600px;
+  margin: auto;
+  border-radius: 25px;
 }
 
 h1 {
@@ -12,6 +21,38 @@ h1 {
 	background-color: #cccccc;
 	border: 15px double #012345;
 	padding: 10px;
+  border-radius: 25px;
+}
+
+h2 {
+	margin: 10px auto;
+	width: 410px;
+	background-color: #cccccc;
+	border: 15px double #012345;
+	padding: 10px;
+	font-weight: bold;
+}
+
+img {
+	width: 270px;
+	border: 10px solid #345678;
+	margin-top: 5px;
+	margin-bottom: 5px;
+  clear: both;
+}
+
+#image1{
+  float: right;
+  margin-left: 10px;
+}
+
+#image2 {
+  float: left;
+  margin-right: 10px;
+}
+
+p {
+  
 }
 
 .q {
@@ -25,19 +66,7 @@ h1 {
 .a {
 	color: #cccccc;
 	font-family: 'Helvetica', sans-serif;
-	clear: both;
 }
-
-
-h2 {
-	margin: 10px auto;
-	width: 410px;
-	background-color: #cccccc;
-	border: 15px double #012345;
-	padding: 10px;
-	font-weight: bold;
-}
-
 
 a:link {
 	color: #012345;
@@ -47,32 +76,9 @@ a:visited {
 	color: #012345;
 }
 
-img {
-	clear: both;
-	width: 270px;
-	border: 10px solid #345678;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-#image1 {
-	float: right;
-	margin-left: 10px;
-}
-
-
-#image2 {
-	float:left;
-	margin-right: 10px;
-}
-
-
-
-
 
 /*navigation styling type 1*/
 /*
-
 nav {
 	background-color: #ffffff;
 	position: fixed;
@@ -81,21 +87,17 @@ nav {
 	width: 100%;
 	text-align:center;
 }
-
 nav a {
 	padding: 5px;
 	border-right: 3px solid #333399;
 	display: inline-block;
 }
-
 nav a:hover {
 	color: #abcdef;
 }
-
 nav a:first-child {
 	border-left: 3px solid #333399;
 }
-
 body {
 	margin-top: 50px;
 }
@@ -104,6 +106,15 @@ body {
 	background-color: #012345;
 	color: #ffffff;
 }
+
+#current:hover {
+	color: #abcdef;
+}
+
+
+
+
+
 
 /*end nav style 1*/
 

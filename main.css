@@ -13,8 +13,10 @@ div {
   padding: 10px;
   border-left: 15px double #666666;
   border-right: 15px double #666666;
-  margin: 0 auto 0 245px;
+  border-bottom: 15px double #666666;
+  margin: 0 auto 20px 245px;
   background-color: #ffffff;
+  border-radius: 0 0 20px 20px
 }
 
 article {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Example</title>
+    <link type='text/css' rel='stylesheet' href='survey.css' />
+    <script type='text/javascript' src='survey.js'></script>
+  </head>
+  <body>
+    <h1>
+      How much do you know about the cheeses of Mexico?
+    </h1>
+    <section id='survey'>
+      <section class='q'>
+        <p>
+          What cheese would be best for a melty quesadilla?
+        </p>
+        <label class='correct'><input type='radio' name='quesadilla' value='1' /><span>Chihuahua</span></label>
+        <label><input type='radio' name='quesadilla' value='0' /><span>Oaxaca</span></label>
+        <label><input type='radio' name='quesadilla' value='0' /><span>Cotija</span></label>
+      </section>
+      <section class='q'>
+        <p>
+          What cheese would be best to sprinkle on crisp salad?
+        </p>
+        <label><input type='radio' name='salad' value='0' /><span>Chihuahua</span></label>
+        <label><input type='radio' name='salad' value='0' /><span>Oaxaca</span></label>
+        <label class='correct'><input type='radio' name='salad' value='1' /><span>Cotija</span></label>
+      </section>
+      <section class='q'>
+        <p>
+          What cheese would be best for fun snack on the go?
+        </p>
+        <label><input type='radio' name='snack' value='0' /><span>Chihuahua</span></label>
+        <label class='correct'><input type='radio' name='snack' value='1' /><span>Oaxaca</span></label>
+        <label><input type='radio' name='snack' value='0' /><span>Cotija</span></label>
+      </section>
+      
+      <input type='submit' onClick='score()' />
+    </section>
+    <p id='score'>
+      
+    </p>
+  </body>
+</html>

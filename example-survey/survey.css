@@ -1,0 +1,46 @@
+body {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section.q {
+  border: 2px dotted #666666;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  text-align: left;
+  clear: left;
+  font-size: 21px;
+}
+
+input[type=radio] {
+  opacity: 0;
+  width: 0;
+}
+
+label span::before {
+  display: block;
+  float: left;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border: 5px solid black;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  background-clip: content-box;
+  border-radius: 0 10px 10px 0;
+}
+
+input:checked ~ span::before {
+  background-color: #0000cc;
+  border-color: #0000cc;
+}
+
+label:hover span::before {
+  background-color: #66cc66;
+  border-color: #66cc66;
+}

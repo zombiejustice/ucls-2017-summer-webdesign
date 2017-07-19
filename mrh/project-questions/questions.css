@@ -1,3 +1,4 @@
+
 body {
 	background-color: #333366;
 	width: 400px;
@@ -29,9 +30,10 @@ p {
 	padding: 10px;
 	margin: 0;
 	border: 10px solid #999999;
+	transition: color 6s;
 }
 
-p.visible {
+p.q {
 	border-bottom: none;
 	background-color: #ffffff;
 	color: #000000;
@@ -39,22 +41,17 @@ p.visible {
 	margin-top: 10px;
 }
 
-p.hidden {
+p.a {
 	border-top: none;
-	background-color: #666666;
-	color: #666666;
+	background-color: #000000;
+	color: #000000;
 	text-align: right;
 	margin-bottom: 10px;
-	transition: 2s color linear, 2s background-color linear;
-
 	
 }
 
-p.hidden:hover {
+.a:hover {
 	color: #ffffff;
-	background-color: #000000;
+	
 }
-
-
-
 

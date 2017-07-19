@@ -1,7 +1,10 @@
-<?php $TODAY = "p4questions-l2"; ?>
+<?php $YEAR = "2017";
+      $TODAY = "p4questions-l1";
+      $ELITE = "o3password-l5";
+?>
 <html>
   <head>
-    <title>SLab 2017 Web Class Page</title>
+    <title>SLab <?php echo $YEAR; ?> Web Class Page</title>
     <link rel='stylesheet' type='text/css' href='/main.css' />
     <script type='text/javascript' src='script-cookies/cookies.js'></script>
     <script type='text/javascript'>
@@ -30,16 +33,26 @@
     </script>
   </head>
   <body onLoad='check_status()'>
-<?php include "$TODAY/nav.php"; ?>
+    <nav>
+      <a href='script-checker'>Project Checker</a>
+      <a href='setup-ftp'>Set-Up CodeAnywhere</a>
+      <?php include "$TODAY/nav.php"; ?>
+      <section class='elite-cadre'>
+        <?php include "$ELITE/nav.php"; ?>
+        <a onClick='i_am_normal()' href='#'>Hide Elite Material</a>
+      </section>
+    </nav>
     <div>
       <h1>
         Web Design
       </h1>
       <h4>
-        Summer 2017
+        Summer <?php echo $YEAR; ?>
       </h4>
 
-      <?php include "$TODAY/index.php" ?>
+      <?php include "$ELITE/index.php";
+            include "$TODAY/index.php";
+      ?>
 
       <article>
         <h3>

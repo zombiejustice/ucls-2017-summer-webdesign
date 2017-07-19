@@ -1,6 +1,20 @@
     <!-- p2animals-l1 begin -->
     <article>
       <h3>
+        Project: Animals Page
+      </h3>
+      <p>
+        Create your own animals page with three animals in three articles, each with text, an image, and its own styling. Use IDs to make each article distinct. Remember to bookmark the original location of your images.
+      </p>
+      <p>
+        To save time, a template for the project has been placed in you server folder.</a>.
+      </p>
+      <p>
+        By the end of the project, we will each have something like <a href='example-animals'>Mr. H's example</a>.
+      </p>
+    </article>
+    <article>
+      <h3>
         Homepage: Box Model
       </h3>
       <p>
@@ -19,14 +33,6 @@ h1 {
       </figure>
       <pre>
 &lt;img src='boxmodel.gif' /&gt;</pre>
-    </article>
-    <article>
-      <h3>
-        Set Up CodeAnywhere
-      </h3>
-      <p>
-        There is now a <a href='setup-ftp'>step-by-step guide</a> to setting up CodeAnywhere to work with the class servers.
-      </p>
     </article>
     <!-- p2animals-l1 end -->
 <?php include "p1homepage-l2/index.php" ?>

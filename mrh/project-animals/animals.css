@@ -1,67 +1,58 @@
 body {
-	background-color: #FF00FF;
+	background-color: #666666;
 }
 
 img {
- width: 400px;
- margin: 10px auto;
- display: block;
- border-width: 10px;
- border-style: solid;
+	display: block;
+	width: 300px;
+	border: 10px outset #cccc99;
+	margin: 10px auto;
 }
 
-h1 {
+h1 { 
+	width: 400px;
+	background-color: #333333;
+	color: #cccccc;
+	border: 10px outset #999999;
+	text-align: center;
+	margin: 20px auto;
+	padding: 10px;
 }
 
 h2 {
-	
-
-}
-
-p {
-	
+	border-bottom: 2px dotted #cccc99;
+	text-align: right;
 }
 
 article {
-
-background-color: #ffffcc;
-	padding: 10px;
-	border: 3px dotted #669999;
-	margin: 20px auto;
-	width: 500px;
-
+	width: 400px;	
+	margin: 10px auto;
 }
 
-#ANIMAL1 {
-	background-color: #FFFFff;
-	padding: 10px;
+figcaption {
+	text-align: center;
+	font-size: 12pt;
 }
 
-#ANIMAL2 {
-	background-color: #ccffcc;
+#blackbear {
+	background-color: #ffffcc;
 	padding: 10px;
-}
-
-#ANIMAL3 {
-	background-color: #FF0000;
-	padding: 10px;
+	border: 10px inset #cccc99;
+	
 }
 
 a:link {
-	text-decoration: none;
-	color: #660099;
+	color: #000000;
 }
 
 a:visited {
-	color: #660099;
+	color: #666666;
 }
 
 a:hover {
-	text-decoration: underline;
-	color: #339933;
-
+	color: #cccccc;
 }
 
 a:active {
-	
+	color: fuchsia;
 }
